@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/home', [HomeController::class,'index'])->name('home');
+Route::get('/home', [HomeController::class,'index'])->middleware(['auth', 'verified'])->name('home');
 
 Route::get('companies/trash', [CompanyController::class,'trashed'])->name('companies.trashed');
 Route::get('companies/{id}/restore', [CompanyController::class,'restore'])->name('companies.restore');
