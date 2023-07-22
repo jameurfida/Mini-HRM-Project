@@ -1,4 +1,4 @@
-<p align="center"><a href="http://mini-hrm.fida.me/" target="_blank"><img src="https://ibb.co/8NggsBJ" width="400" alt="Mini-HRM Logo"></a></p>
+<p align="center"><a href="http://mini-hrm.fida.me/" target="_blank"><img src="https://i.ibb.co/Bc223Pm/hrm-logo-01.png" width="400" alt="Mini-HRM Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
