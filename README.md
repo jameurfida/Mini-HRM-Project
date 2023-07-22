@@ -1,66 +1,75 @@
 <p align="center"><a href="http://mini-hrm.fida.me/" target="_blank"><img src="https://i.ibb.co/Bc223Pm/hrm-logo-01.png" width="400" alt="Mini-HRM Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://mini-hrm.fida.me"><img src="https://img.shields.io/badge/Preview%20Demo-blue" alt="Preview Demo"></a>
+<a href="#"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="#"><img src="https://img.shields.io/badge/version-v1.0.0_beta-blue" alt="Current Version"></a>
+<a href="#"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+<p align="center">Admin Panel to manage Companies and Employees.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Table of Contents
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [About](#about)
+- [Features](#features)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [License](#license)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## About
 
-## Learning Laravel
+<b>Mini-HRM</b> is a web application built using Laravel, aimed at managing companies and their employees efficiently. It provides basic CRUD functionality for companies and employees, along with additional features like email notifications, trash functionality, and a user-friendly front-end theme.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Basic Laravel Auth: Administrators can log in to the application.
+- Database Seeds: The first user with email admin@admin.com and password "password" is created.
+- Companies CRUD: Ability to create, read, update, and delete companies.
+- Employees CRUD: Ability to create, read, update, and delete employee records associated with companies.
+- Companies DB Table: Fields include Name (required), email, and logo (minimum 100x100).
+- Employees DB Table: Fields include First name (required), last name (required), Company (foreign key to Companies), email, and phone.
+- Database Migrations: Migrations are used to create the necessary database schemas.
+- File Storage: Companies' logos are stored in storage/app/public folder and made accessible to the public.
+- Validation: Laravel's validation function using Request classes is implemented.
+- Pagination: Laravel's pagination is used to display Companies/Employees lists with 10 entries per page.
+- Front-end Theme: Utilized more complicated front-end theme like Tabler.
+- Email Notification: Sends an email whenever a new company is entered using Mailgun or Mailtrap.
+- Move Deleted Items to Trash: Soft deletion implemented to move deleted items to trash.
+- View & Restore Trashed Data: Ability to view and restore trashed data.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Demo
 
-## Laravel Sponsors
+[Mini-HRM Project Demo](https://mini-hrm.fida.me) <a href="https://mini-hrm.fida.me"><img src="https://img.shields.io/badge/Preview-blue" alt="Preview Demo"></a>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Installation
 
-### Premium Partners
+1. Clone the repository.
+2. Install the required dependencies using composer:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Usage
 
-## Contributing
+Run the development server:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```php artisan serve```
 
-## Code of Conduct
+1. Open your browser and navigate to the application.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. Log in using the provided credentials (admin@admin.com / password).
 
-## Security Vulnerabilities
+3. Start managing companies and employees through the user-friendly interface.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Technologies Used
+
+Laravel - The PHP web application framework.
+Tabler - The front-end theme used for an enhanced user experience.
+Mailgun or Mailtrap - For email notifications.
+Other dependencies (list any additional technologies or packages used).
+Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or create a pull request.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the MIT license.
