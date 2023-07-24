@@ -2,9 +2,9 @@
 
 <p align="center">
 <a href="https://mini-hrm.fida.me"><img src="https://img.shields.io/badge/Preview%20Demo-blue" alt="Preview Demo"></a>
-<a href="#"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<!-- <a href="#"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a> -->
 <a href="#"><img src="https://img.shields.io/badge/version-v1.0.0_beta-blue" alt="Current Version"></a>
-<a href="#"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="#"><img src="https://wakatime.com/badge/user/76ec1d7f-84a1-4c94-8f9a-076e33961fb1/project/614f526c-5445-4ffa-8ce1-0198d4cf8fd3.svg" alt="License"></a>
 </p>
 
 <p align="center">Admin Panel to manage Companies and Employees.</p>
